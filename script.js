@@ -34,8 +34,8 @@ function playWord() {
     audio.play();
 
     // Displaying the word and its translation
-    document.getElementById('מילה באנגלית').textContent = `Word: ${word}`;
-    document.getElementById('תרגום לעברית').textContent = `Translation: ${translations[word]}`;
+    document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${word}`;
+    document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
 }
 
 document.getElementById('playWord').addEventListener('click', loadTranslationsAndPlayWord);
