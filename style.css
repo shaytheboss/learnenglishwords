@@ -20,6 +20,29 @@ body {
     align-items: center; /* Center content vertically */
 }
 
+
+#playAgain {
+	color: blue; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 100vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+	margin-top: 200px; /* Shift 100px to the left */
+    align-items: center; /* Center content vertically */
+}
+
+#displayWordInHebrew {
+	color: black; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 100vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+	margin-top: 300px; /* Shift 100px to the left */
+    align-items: center; /* Center content vertically */
+}
+
 #wordDisplay {
     color: blue; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
