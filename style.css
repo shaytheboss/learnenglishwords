@@ -5,7 +5,7 @@ body {
   display: flex;
   /*align-items: center; */
   justify-content: center;
-  height: 100vh;
+  height: 10vh;
   background-color: #FFFFFF;
 }
 
@@ -13,7 +13,7 @@ body {
 	color: green; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
     text-align: center; /* Center text horizontally */
-    height: 100vh; /* Take full height of the viewport */
+    height: 10vh; /* Take full height of the viewport */
     display: flex;
     justify-content: center; /* Center content horizontally */
 	margin-top: 100px; /* Shift 100px to the left */
@@ -25,10 +25,10 @@ body {
 	color: blue; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
     text-align: center; /* Center text horizontally */
-    height: 100vh; /* Take full height of the viewport */
+    height: 10vh; /* Take full height of the viewport */
     display: flex;
     justify-content: center; /* Center content horizontally */
-	margin-top: 200px; /* Shift 100px to the left */
+	margin-top: 200px; /* Shift 200px to the left */
     align-items: center; /* Center content vertically */
 }
 
@@ -36,18 +36,18 @@ body {
 	color: black; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
     text-align: center; /* Center text horizontally */
-    height: 100vh; /* Take full height of the viewport */
+    height: 10vh; /* Take full height of the viewport */
     display: flex;
     justify-content: center; /* Center content horizontally */
-	margin-top: 300px; /* Shift 100px to the left */
+	margin-top: 300px; /* Shift 300px to the left */
     align-items: center; /* Center content vertically */
 }
 
 #wordDisplay {
-    color: blue; /* Change to your preferred color */
+    color: green; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
     text-align: center; /* Center text horizontally */
-    height: 100vh; /* Take full height of the viewport */
+    height: 10vh; /* Take full height of the viewport */
     display: flex;
     justify-content: center; /* Center content horizontally */
 	margin-right: 100px; /* Shift 100px to the left */
@@ -56,10 +56,10 @@ body {
 
 
 #translationDisplay {
-    color: blue; /* Change to your preferred color */
+    color: green; /* Change to your preferred color */
     font-size: 40px; /* Adjust the size as needed */
     text-align: center; /* Center text horizontally */
-    height: 100vh; /* Take full height of the viewport */
+    height: 10vh; /* Take full height of the viewport */
     display: flex;
     justify-content: center; /* Center content horizontally */
 	margin-right: 50px; /* Shift 50px to the left */
