@@ -18,7 +18,15 @@ body {
     justify-content: center; /* Center content horizontally */
 	margin-top: 100px; /* Shift 100px to the left */
     align-items: center; /* Center content vertically */
+	
+
+    width: 100px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work */
 }
+
+
 
 
 #playAgain {
@@ -30,7 +38,10 @@ body {
     justify-content: center; /* Center content horizontally */
 /*	margin-top: 200px; /* Shift 200px to the left */
     align-items: center; /* Center content vertically */
-}
+	width: 100px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work *}
 
 #displayWordInHebrew {
 	color: black; /* Change to your preferred color */
@@ -41,6 +52,10 @@ body {
     justify-content: center; /* Center content horizontally */
 /*	margin-top: 300px; /* Shift 300px to the left */
     align-items: center; /* Center content vertically */
+	width: 100px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work */
 }
 
 #wordDisplay {
