@@ -40,15 +40,15 @@ function playWord() {
     document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
 }
 
-// Function to play again the word
+// Function to play again the last word
 function playAgain() {
-   
-    // Playing the audio
-    var audio = new Audio(`sounds/${lastPlayedWord}.mp3`);
-    audio.play();
-
+    if (lastPlayedWord) {
+        var audio = new Audio(`sounds/${lastPlayedWord}.mp3`);
+        audio.play();
+    } else {
+        console.error('No word has been played yet');
+    }
 }
-
 
 // Function to show the hebrew translate
 function displayWordInHebrew() {
