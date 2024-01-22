@@ -1,4 +1,5 @@
 let translations = {};
+let lastPlayedWord = null;
 
 // Function to load translations and then play a word
 function loadTranslationsAndPlayWord() {
@@ -28,6 +29,7 @@ function playWord() {
 
     const randomIndex = Math.floor(Math.random() * words.length);
     const word = words[randomIndex];
+	lastPlayedWord = words[randomIndex]; // set the last played word
 
     // Playing the audio
     var audio = new Audio(`sounds/${word}.mp3`);
@@ -42,7 +44,7 @@ function playWord() {
 function playAgain() {
    
     // Playing the audio
-    var audio = new Audio(`sounds/${word}.mp3`);
+    var audio = new Audio(`sounds/${lastPlayedWord}.mp3`);
     audio.play();
 
 }
@@ -58,5 +60,5 @@ function displayWordInHebrew() {
 
 
 document.getElementById('playWord').addEventListener('click', loadTranslationsAndPlayWord);
-document.getElementById('playAgain').addEventListener('click', loadTranslationsAndPlayAgain);
-document.getElementById('displayWordInHebrew').addEventListener('click', loadTranslationsdisplayWordInHebrew);
+document.getElementById('playAgain').addEventListener('click', playAgain);
+// document.getElementById('displayWordInHebrew').addEventListener('click', loadTranslationsdisplayWordInHebrew);
