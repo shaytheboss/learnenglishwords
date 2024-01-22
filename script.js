@@ -29,7 +29,7 @@ function playWord() {
 
     const randomIndex = Math.floor(Math.random() * words.length);
     const word = words[randomIndex];
-	lastPlayedWord = words[randomIndex]; // set the last played word
+	lastPlayedWord = word; // set the last played word
 
     // Playing the audio
     var audio = new Audio(`sounds/${word}.mp3`);
