@@ -36,8 +36,8 @@ function playWord() {
     audio.play();
 
     // Displaying the word and its translation
-    document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${word}`;
-    document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
+    //document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${word}`;
+    //document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
 }
 
 // Function to play again the last word
@@ -52,13 +52,17 @@ function playAgain() {
 
 // Function to show the hebrew translate
 function displayWordInHebrew() {
+	if (lastPlayedWord) {
+         // Displaying the word and its translation
+		document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${lastPlayedWord}`;
+		document.getElementById('translationDisplay').textContent = `תרגום: ${translations[lastPlayedWord]}`;
+    } else {
+        console.error('No word has been played yet');
+    }
    
-    // Displaying the word and its translation
-    document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${word}`;
-    document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
 }
 
 
 document.getElementById('playWord').addEventListener('click', loadTranslationsAndPlayWord);
 document.getElementById('playAgain').addEventListener('click', playAgain);
-// document.getElementById('displayWordInHebrew').addEventListener('click', loadTranslationsdisplayWordInHebrew);
+document.getElementById('displayWordInHebrew').addEventListener('click', displayWordInHebrew);
