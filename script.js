@@ -35,9 +35,9 @@ function playWord() {
     var audio = new Audio(`sounds/${word}.mp3`);
     audio.play();
 
-    // Displaying the word and its translation
-    //document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${word}`;
-    //document.getElementById('translationDisplay').textContent = `תרגום: ${translations[word]}`;
+    // cleaning from the webpage the word and its translation
+    document.getElementById('wordDisplay').textContent = ` `;
+    document.getElementById('translationDisplay').textContent = ` `;
 }
 
 // Function to play again the last word
@@ -54,7 +54,7 @@ function playAgain() {
 function displayWordInHebrew() {
 	if (lastPlayedWord) {
          // Displaying the word and its translation
-		document.getElementById('wordDisplay').textContent = `מילה באנגלית testt: ${lastPlayedWord}`;
+		document.getElementById('wordDisplay').textContent = `מילה באנגלית : ${lastPlayedWord}`;
 		document.getElementById('translationDisplay').textContent = `תרגום: ${translations[lastPlayedWord]}`;
     } else {
         console.error('No word has been played yet');
