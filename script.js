@@ -27,6 +27,10 @@ function playWord() {
         return;
     }
 
+    // cleaning from the webpage the word and its translation
+    document.getElementById('wordDisplay').textContent = `*******`;
+    document.getElementById('translationDisplay').textContent = `******* `;
+	
     const randomIndex = Math.floor(Math.random() * words.length);
     const word = words[randomIndex];
 	lastPlayedWord = word; // set the last played word
@@ -35,9 +39,6 @@ function playWord() {
     var audio = new Audio(`sounds/${word}.mp3`);
     audio.play();
 
-    // cleaning from the webpage the word and its translation
-    document.getElementById('wordDisplay').textContent = ` `;
-    document.getElementById('translationDisplay').textContent = ` `;
 }
 
 // Function to play again the last word
