@@ -54,7 +54,7 @@ function playAgain() {
 function displayWordInHebrew() {
 	if (lastPlayedWord) {
          // Displaying the word and its translation
-		document.getElementById('wordDisplay').textContent = `מילה באנגלית: ${lastPlayedWord}`;
+		document.getElementById('wordDisplay').textContent = `מילה באנגלית testt: ${lastPlayedWord}`;
 		document.getElementById('translationDisplay').textContent = `תרגום: ${translations[lastPlayedWord]}`;
     } else {
         console.error('No word has been played yet');
