@@ -1,1 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /*align-items: center; */
+  justify-content: center;
+  height: 10vh;
+  background-color: #FFFFFF;
+}
+
+#playWord {
+	color: green; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 10vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+
+    align-items: center; /* Center content vertically */
+	
+
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work */
+}
+
+
+
+
+#playAgain {
+	color: blue; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 10vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+/*	margin-top: 200px; /* Shift 200px to the left */
+    align-items: center; /* Center content vertically */
+	width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work */
+
+}
+
+#displayWordInHebrew {
+	color: black; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 10vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+/*	margin-top: 300px; /* Shift 300px to the left */
+    align-items: center; /* Center content vertically */
+	width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+/*    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* This makes the margin auto work */
+}
+
+#wordDisplay {
+    color: green; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 10vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+	margin-right: 100px; /* Shift 100px to the left */
+    align-items: center; /* Center content vertically */
+}
+
+
+#translationDisplay {
+    color: green; /* Change to your preferred color */
+    font-size: 40px; /* Adjust the size as needed */
+    text-align: center; /* Center text horizontally */
+    height: 10vh; /* Take full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+	margin-right: 50px; /* Shift 50px to the left */
+    align-items: center; /* Center content vertically */
+}
 
