@@ -1,6 +1,11 @@
 let translations = {};
 let lastPlayedWord = null;
 
+document.getElementById('pagelevel1').addEventListener('click', function() {
+    window.location.href = 'pagelevel1.html'; // Replace with the actual URL of your page
+});
+
+
 // Function to load translations and then play a word
 function loadTranslationsAndPlayWord() {
     fetch('translations.json')
