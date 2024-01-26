@@ -1,7 +1,7 @@
 let translations = {};
 let lastPlayedWord = null;
 
-document.getElementById('pagelevel1').addEventListener('click', function() {
+document.getElementById('pageLevel1').addEventListener('click', function() {
     window.location.href = 'pageLevel1.html'; // Replace with the actual URL of your page
 });
 
