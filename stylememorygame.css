@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+.card {
+    background-color: #EEE;
+    height: 100px;
+    line-height: 100px;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card.flipped {
+    background-color: #FFF;
+}

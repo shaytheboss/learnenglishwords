@@ -5,6 +5,9 @@ document.getElementById('pageLevel1').addEventListener('click', function() {
     window.location.href = 'pageLevel1.html'; // Replace with the actual URL of your page
 });
 
+document.getElementById('memoryGamePage').addEventListener('click', function() {
+    window.location.href = 'memoryGamePage.html'; // Replace with the actual URL of your page
+});
 
 // Function to load translations and then play a word
 function loadTranslationsAndPlayWord() {
