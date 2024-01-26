@@ -37,7 +37,7 @@ function playWord() {
 
     // cleaning from the webpage the word and its translation
     
-    document.getElementById('translationDisplay').textContent = `******* `;
+    document.getElementById('translationDisplay').textContent = `  *******   `;
 	
     const randomIndex = Math.floor(Math.random() * words.length);
     const word = words[randomIndex];
