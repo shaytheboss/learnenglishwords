@@ -43,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		let isMatch = firstCard.dataset.word === secondCard.dataset.word;
 
 		if (isMatch) {
-			// If cards match, hide them
+			// If cards match, display a success message and hide them
+			displaySuccessMessage(); // Display success message
+			
 			setTimeout(() => {
 				firstCard.style.visibility = 'hidden';
 				secondCard.style.visibility = 'hidden';
@@ -53,6 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			// If cards don't match, flip them back
 			unflipCards();
 		}
+	}
+
+
+	function displaySuccessMessage() {
+		const message = document.getElementById('success-message');
+		message.textContent = "Great Match!";
+		setTimeout(() => {
+			message.textContent = "";
+		}, 1500); // Clear message after a delay
 	}
 
 	function unflipCards() {
