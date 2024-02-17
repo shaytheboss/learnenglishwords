@@ -12,14 +12,21 @@ body {
 }
 
 .card {
-    background-color: #EEE;
-    height: 100px;
-    line-height: 100px;
-    color: #333;
-    font-size: 20px;
-    cursor: pointer;
+  width: 100px; /* Adjust based on your preference */
+  height: 150px; /* Adjust based on your preference */
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .card.flipped {
-    background-color: #FFF;
+  transform: rotateY(180deg);
 }
