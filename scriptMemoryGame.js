@@ -1,15 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const gameBoard = document.getElementById('game-board');
-    const words = ['House', 'בית', 'Cat', 'חתול', 'Tree', 'עץ'];
-    const mixedWords = shuffle([...words, ...words]);
 
-    mixedWords.forEach(word => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.dataset.word = word;
-        card.addEventListener('click', flipCard);
-        gameBoard.appendChild(card);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('memoryWords.json')
+    .then(response => response.json())
+    .then(data => {
+        const gameBoard = document.getElementById('game-board');
+        // Convert object to an array of [key, value] pairs, then flatten it
+        const words = Object.entries(data).flat();
+        const mixedWords = shuffle([...words, ...words]);
+
+        mixedWords.forEach(word => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.word = word;
+            card.addEventListener('click', flipCard);
+            gameBoard.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error loading words:', error));
+
+    // Remainder of the script...
+
 
     let firstCard, secondCard;
     let hasFlippedCard = false;
@@ -28,25 +38,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function checkForMatch() {
-        const isFirstCardEnglish = isNaN(firstCard.dataset.word);
-        const isSecondCardHebrew = isNaN(secondCard.dataset.word);
 
-        if ((isFirstCardEnglish && !isSecondCardHebrew) || (!isFirstCardEnglish && isSecondCardHebrew)) {
-            if (firstCard.dataset.word === secondCard.dataset.word) {
-                firstCard.removeEventListener('click', flipCard);
-                secondCard.removeEventListener('click', flipCard);
-            } else {
-                setTimeout(() => {
-                    firstCard.classList.remove('flipped');
-                    secondCard.classList.remove('flipped');
-                    firstCard.textContent = '';
-                    secondCard.textContent = '';
-                }, 1000);
-            }
-            resetBoard();
-        }
-    }
+	function checkForMatch() {
+		let isMatch = firstCard.dataset.word === secondCard.dataset.word;
+
+		if (isMatch) {
+			// If cards match, hide them
+			setTimeout(() => {
+				firstCard.style.visibility = 'hidden';
+				secondCard.style.visibility = 'hidden';
+				resetBoard();
+			}, 500);
+		} else {
+			// If cards don't match, flip them back
+			unflipCards();
+		}
+	}
+
+	function unflipCards() {
+		setTimeout(() => {
+			firstCard.classList.remove('flipped');
+			secondCard.classList.remove('flipped');
+			firstCard.textContent = ''; // Remove text when flipped back
+			secondCard.textContent = ''; // Remove text when flipped back
+			resetBoard();
+		}, 1500);
+	}
+
+
 
     function resetBoard() {
         [hasFlippedCard, firstCard, secondCard] = [false, null, null];
